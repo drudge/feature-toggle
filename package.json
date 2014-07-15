@@ -31,7 +31,7 @@
     "url": "git://github.com/drudge/feature-toggle.git"
   },
   "scripts": {
-    "test": ""
+    "test": "node test"
   },
   "dependencies": {
     "events": "^1.0.1",
@@ -40,5 +40,18 @@
   },
   "engines": {
     "node": ">=0.8"
+  },
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [
+      "ie/6..latest",
+      "chrome/22..latest",
+      "firefox/16..latest",
+      "safari/latest",
+      "opera/11.0..latest",
+      "iphone/6",
+      "ipad/6",
+      "android-browser/latest"
+    ]
   }
 }
