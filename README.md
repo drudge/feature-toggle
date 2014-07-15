@@ -1,7 +1,7 @@
 feature-toggle
 ==============
 
-[![browser support](https://ci.testling.com/drudge/feature-toggle.png)](https://ci.testling.com/drudge/feature-toggle)
+[![browser support](https://ci.testling.com/drudge/feature-toggle.png)](https://ci.testling.com/drudge/feature-toggle) [![Build Status](https://travis-ci.org/drudge/feature-toggle.svg)](https://travis-ci.org/drudge/feature-toggle)
 
 A painless feature toggle system in JavaScript. Decouple development and deployment.
 
