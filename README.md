@@ -1,26 +1,26 @@
-feature-toggle
+featureset
 ==============
 
-[![browser support](https://ci.testling.com/drudge/feature-toggle.png)](https://ci.testling.com/drudge/feature-toggle) [![Build Status](https://travis-ci.org/drudge/feature-toggle.svg)](https://travis-ci.org/drudge/feature-toggle)
+[![browser support](https://ci.testling.com/drudge/featureset.png)](https://ci.testling.com/drudge/featureset) [![Build Status](https://travis-ci.org/drudge/featureset.svg)](https://travis-ci.org/drudge/featureset)
 
 A painless feature toggle system in JavaScript. Decouple development and deployment.
 
 ## Install
 
 ```
-$ npm install --save feature-toggle
+$ npm install --save featureset
 ```
 
 ## Usage
 
 ```js
-var setFeatures = require('feature-toggle');
+var featureset = require('featureset');
 
 // This will set the list of currently active
 // features, and add the feature classes to the
 // body element. It will take url parameters 
 // into account:
-var feature = setFeatures(['feature1', 'feature2']);
+var feature = featureset(['feature1', 'feature2']);
 
 // Query for an active feature:
 if ( feature.active('search') ) {
@@ -28,21 +28,16 @@ if ( feature.active('search') ) {
 }
 ```
 
-### setFeatures(features):Object
+### features(features):Object
 
 Take an optional list of features, set the feature classes on the body tag, and return the feature toggle object.
 
 * @param {Array} baseFeatures List of base features.
 * @return {Object} feature object
-
-The feature-toggle-client module returns a single function, `setFeatures()`, which determines the active features on the page.
-
-It does so by combining:
-
-* Features passed into `setFeatures()`
+ Features passed into `featureset()`
 
 ```js
-var feature = setFeatures(['feature1', 'feature2']);
+var feature = featureset(['feature1', 'feature2']);
 
 feature.active('feature1'); // true
 ```
