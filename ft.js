@@ -1,4 +1,4 @@
-var EventEmitter = require('component-emitter');
+var EventEmitter = require('events').EventEmitter;
 var union = require('lodash.union');
 var inherits = require('inherits');
 
