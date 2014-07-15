@@ -9,21 +9,21 @@ var inherits = require('inherits');
  * @param {Array} baseFeatures List of base features.
  * @return {Object} feature object
  */
-var FT = module.exports = function(baseFeatures){
-  if(!(this instanceof FT)) return new FT(baseFeatures);
+var Featureset = module.exports = function(baseFeatures){
+  if(!(this instanceof Featureset)) return new Featureset(baseFeatures);
   EventEmitter.call(this);
   this.activeFeatures = Array.isArray(baseFeatures) ? baseFeatures : [];
   this.inactiveFeatures = [];
 };
 
-inherits(FT, EventEmitter);
+inherits(Featureset, EventEmitter);
 
 /**
  * Check to see if a feature is active.
  * @param  {String} feature
  * @return {Boolean}
  */
-FT.prototype.active = function(features){
+Featureset.prototype.active = function(features){
   features = Array.isArray(features) ? features : [features];
   return features.every(function(feature){
     return this.activeFeatures.indexOf(feature) >= 0;
@@ -36,7 +36,7 @@ FT.prototype.active = function(features){
  * @param  {Array} features
  * @return {Object} this (for chaining)
  */
-FT.prototype.activate = function(features){
+Featureset.prototype.activate = function(features){
   features = Array.isArray(features) ? features : [features];
   this.activeFeatures = union(this.activeFeatures, features);
   this.emit('activated', features);
@@ -49,7 +49,7 @@ FT.prototype.activate = function(features){
  * @param  {Array} features
  * @return {Object} this (for chaining)
  */
-FT.prototype.deactivate = function(features){
+Featureset.prototype.deactivate = function(features){
   features = Array.isArray(features) ? features : [features];
 
   var diff = this.activeFeatures.filter(function(feature){

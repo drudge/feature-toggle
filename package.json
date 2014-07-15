@@ -1,5 +1,5 @@
 {
-  "name": "feature-toggle",
+  "name": "featureset",
   "version": "1.0.0",
   "description": "a painless feature toggle system in JavaScript",
   "keywords": [
@@ -11,24 +11,24 @@
     "flipper",
     "conditional"
   ],
-  "homepage": "https://github.com/drudge/feature-toggle",
+  "homepage": "https://github.com/drudge/featureset",
   "bugs": {
-    "url": "http://github.com/drudge/feature-toggle/issues",
+    "url": "http://github.com/drudge/featureset/issues",
     "email": "nick@penree.com"
   },
   "license": {
-    "url": "https://raw.github.com/drudge/feature-toggle/master/license",
+    "url": "https://raw.github.com/drudge/featureset/master/license",
     "type": "MIT"
   },
-  "author": "Eric Elliott",
+  "author": "Sérgio Ramos <mail@sergioramos.me> (http://sergioramos.me)",
   "contributors": [
-    "Sérgio Ramos <mail@sergioramos.me> (http://sergioramos.me)",
-    "Nick Penree <nick@penree.com>"
+    "Nick Penree <nick@penree.com>",
+    "Eric Elliott"
   ],
-  "main": "ft.js",
+  "main": "featureset.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/drudge/feature-toggle.git"
+    "url": "git://github.com/drudge/featureset.git"
   },
   "scripts": {
     "test": "node test"
