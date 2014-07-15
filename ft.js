@@ -23,8 +23,11 @@ inherits(FT, EventEmitter);
  * @param  {String} feature
  * @return {Boolean}
  */
-FT.prototype.active = function(feature){
-  return this.activeFeatures.indexOf(feature) >= 0;
+FT.prototype.active = function(features){
+  features = Array.isArray(features) ? features : [features];
+  return features.every(function(feature){
+    return this.activeFeatures.indexOf(feature) >= 0;
+  }, this);
 };
 
 /**
