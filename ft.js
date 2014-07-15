@@ -1,6 +1,6 @@
 var EventEmitter = require('events').EventEmitter;
 var union = require('lodash.union');
-var inherits = require('util').inherits;
+var inherits = require('inherits');
 
 /**
  * Take an optional list of features, set the feature
@@ -23,8 +23,11 @@ inherits(FT, EventEmitter);
  * @param  {String} feature
  * @return {Boolean}
  */
-FT.prototype.active = function(feature){
-  return this.activeFeatures.indexOf(feature) >= 0;
+FT.prototype.active = function(features){
+  features = Array.isArray(features) ? features : [features];
+  return features.every(function(feature){
+    return this.activeFeatures.indexOf(feature) >= 0;
+  }, this);
 };
 
 /**
