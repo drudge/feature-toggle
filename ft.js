@@ -1,6 +1,6 @@
-var EventEmitter = require('events').EventEmitter;
+var EventEmitter = require('component-emitter');
 var union = require('lodash.union');
-var inherits = require('util').inherits;
+var inherits = require('inherits');
 
 /**
  * Take an optional list of features, set the feature
