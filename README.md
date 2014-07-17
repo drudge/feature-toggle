@@ -14,13 +14,13 @@ $ npm install --save featureset
 ## Usage
 
 ```js
-var featureset = require('featureset');
+var features = require('featureset');
 
 // This will set the list of currently active
 // features, and add the feature classes to the
 // body element. It will take url parameters 
 // into account:
-var feature = featureset(['feature1', 'feature2']);
+var feature = features(['feature1', 'feature2']);
 
 // Query for an active feature:
 if ( feature.active('search') ) {
